@@ -111,6 +111,7 @@
 #include <fcntl.h>
 
 #include <stdlib.h>
+#include <unistd.h>
 
 #ifdef ANDROID
 #include <termios.h>
@@ -455,7 +456,6 @@ parse_cmd_line(int argc, char **argv)
 		parse_scopcm, parse_i2s, parse_no2bytes, parse_tosleep};
 
 	while (1) {
-		int this_option_optind = optind ? optind : 1;
 		int option_index = 0;
 
 		static struct option long_options[] = {
