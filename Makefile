@@ -15,8 +15,8 @@ $(PROG): $(SRCS)
 install:
 	mkdir -p $(DESTDIR)/usr/bin
 	cp -P $(PROG) $(DESTDIR)/usr/bin
-	mkdir -p $(DESTDIR)/lib/firmware
-	cp -PR firmware/brcm $(DESTDIR)/lib/firmware/
+	mkdir -p $(FWDIR)/lib/firmware
+	cp -PR firmware/brcm $(FWDIR)/lib/firmware/
 
 clean:
 	rm -f $(PROG)
