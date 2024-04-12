@@ -1,0 +1,17 @@
+country_list=SG:SG/0
+PM=0
+dhd_master_mode=1
+suspend_mode=1
+pkt_filter_delete=100, 102, 103, 104, 105, 106, 107
+pkt_filter_add=141 0 0 0 0xFFFFFFFFFFFF 0x000000000000
+insuspend=0x7
+wl_suspend=3=0
+wl_resume=2=0
+#fwq add for disable driver fw log @sdmc 2023.07.03
+#dhd_watchdog_ms=10
+#dhd_console_ms=10
+#fwq add for disable driver fw log @sdmc 2023.07.03
+#config_msg_level=0xf
+#dhd_msg_level=0x801
+nv_by_chip=1 \
+43752 2 nvram_ap6275p.txt
