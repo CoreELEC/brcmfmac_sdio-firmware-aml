@@ -1,6 +1,9 @@
-country_list=SG:SG/0
+ccode=DE
+regrev=0
+country_list=DE:DE/0
 PM=0
 dhd_master_mode=1
+rekey_offload=1
 suspend_mode=1
 pkt_filter_delete=100, 102, 103, 104, 105, 106, 107
 pkt_filter_add=141 0 0 0 0xFFFFFFFFFFFF 0x000000000000
