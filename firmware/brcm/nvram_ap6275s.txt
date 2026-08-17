@@ -1,9 +1,9 @@
-# AP6275S_NVRAM_V1.2.1_20200311
-# AP6275S v00 WLBGA reference board, iPA version.
+# AP6275SR3_NVRAM_V1.0_20200429_BTCDYN
+# AP6275SR3 v00 WLBGA reference board, iPA version.
 
 # SSID generated using Alberto's boardssid.py script:
 # ********************SUMMARY********************
-# Board Name: AP6275S_V00
+# Board Name: AP6275SR3_V00
 #SSID: 0x086d
 #macmid: 0x02df
 # Successfully made SSID entry in sromdefs.tcl.
@@ -14,12 +14,12 @@
 #
 #
 # <<Broadcom-WL-IPTag/Proprietary:>>
-NVRAMRev=$Rev: 844050 $
+NVRAMRev=$Rev: 849659 $
 sromrev=11
 boardrev=0x1213
 boardtype=0x08ed
-boardflags=0x00400201
-boardflags2=0xc0800000
+boardflags=0x00000201
+boardflags2=0xc0000000
 boardflags3=0x40002180
 #boardnum=57410
 macaddr=00:90:4c:12:d0:01
@@ -84,17 +84,8 @@ tworangetssi5g=0
 lowpowerrange2g=0
 lowpowerrange5g=0
 low_adc_rate_en=1
-# NOTE :================================================================================
-# To run TPC with Two Range TSSI ,set  tworangetssi2g = 1 and lowpowerrange2g = 0
-# To run TPC with Single Range TSSI, set tworangetssi2g = 0
-# To run TPC please READ instructions near pa2ga0 and pa2ga1 as well
-# To generate PA params for Low Range set  tworangetssi2g = 0 and lowpowerrange2g to 1
-# To generate PA params for High Range set  tworangetssi2g = 1 and lowpowerrange2g to 1
-# ======================================================================================
 
-#Related to FW Download. Host may use this
 nocrc=1
-
 otpimagesize=502
 
 xtalfreq=37400
@@ -133,11 +124,11 @@ temps_period=15
 temps_hysteresis=15
 
 #------------- TSSI Related -------------
-
 tssipos2g=1
 tssipos5g=1
 AvVmid_c0=2,127,4,92,4,91,4,91,4,94
 AvVmid_c1=2,127,4,93,4,93,4,95,3,110
+
 # CCK in case of multi mode 2
 pa2gccka0=-71,9683,-1064
 pa2gccka1=-59,9596,-1046
@@ -152,8 +143,8 @@ pa5ga1=-148,6016,-719,-136,6243,-722,-123,6019,-711,-89,7190,-798
 # Max power and offsets
 maxp2ga0=86
 maxp2ga1=91
-maxp5ga0=75,76,68,68
-maxp5ga1=73,76,70,76
+maxp5ga0=73,76,68,70
+maxp5ga1=73,76,62,68
 subband5gver=0x4
 paparambwver=3
 cckpwroffset0=-5
@@ -223,7 +214,7 @@ clb2gslice0core1=0x056
 clb2gslice1core1=0x000
 clb5gslice0core1=0x0a1
 clb5gslice1core1=0x000
-btc_prisel_ant_mask=0x2
+btc_prisel_ant_mask=0x3
 clb_swctrl_smask_ant0=0x27f
 clb_swctrl_smask_ant1=0x2f7
 
@@ -262,7 +253,7 @@ rpcal5gb1=228
 rpcal5gb2=222
 rpcal5gb3=229
 rpcal2g=15
-ocl=1
+ocl=0
 bt_coex_chdep_div=1
 
 # OLPC Related
@@ -347,10 +338,12 @@ muxenab=0x10
 
 # ###########  BTC Dynctl profile params  ############
 # flags:bit0 - dynctl enabled, bit1 dynamic desense, bit2 dynamic mode, bit 3 TX power control
-#btcdyn_flags=1
-
-#btcdyn_default_btc_mode=5
-#btcdyn_msw_rows=0
+btcdyn_flags=0x05
+btcdyn_default_btc_mode=5
+btcdyn_msw_rows=1
 #btcdyn_dsns_rows=0
-#btc_params1007=100
+btc_params1007=100
 #btc_params1017=4
+btc_siso_ack=0x2
+btcdyn_msw_row0=1,-20,1,-75,-100
+btc_params82=0x0020
